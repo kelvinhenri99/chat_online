@@ -92,32 +92,46 @@
     width: 1310px;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: black;
+    background-color: aqua;
+    margin: 0 auto;
+    transition: 0.5s;
 }
 
 .divMenu a {
-    background-color: aqua;
-    color: black;
+    background-color: black;
+    color: white;
     text-decoration: none;
     font-size: 25px;
     transition: 0.4s;
-    padding: 5px;
+    padding: 6px;
     margin-left: 20px;
     margin-right: 20px;
     padding-left: 40px;
     border-radius: 10px;
+    border: 1px solid black;
 }
 
 .divMenu a:hover {
-    background-color: white;
+    background-color: rgb(40, 40, 40);
+    border-color: white;
+}
+
+#logout:hover {
+    background-color: red;
+    transition: 0.4s;
+    border-color: black;
 }
 
 .divMenu a ion-icon {
     background-color: transparent;
-    color: black;
+    color: white;
     font-size: 30px;
     position: absolute;
     margin-left: -35px;
+}
+
+.divMenu form {
+    display: inline-block;
 }
 
 .divLogin {

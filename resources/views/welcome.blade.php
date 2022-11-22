@@ -54,7 +54,7 @@
         <a href="#"><ion-icon name="build"></ion-icon> Configurações</a>
         <form method="POST" action="{{ route('logout') }}">
             @csrf
-            <a href="{{ route('logout') }}" onclick="event.preventDefault();this.closest('form').submit();"><ion-icon name="exit"></ion-icon> Sair</a>
+            <a href="{{ route('logout') }}" id="logout" onclick="event.preventDefault();this.closest('form').submit();"><ion-icon name="exit"></ion-icon> Sair</a>
         </form>
     </div>
 @endauth
