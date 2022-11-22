@@ -5,35 +5,43 @@
 <div class="divLoginOrRegister">
     <h1>Faça o Login ou Cadastre-se GRATIS</h1>
     <div class="divLogin">
+        <h1>Login</h1>
         <form method="POST" action="{{ route('login') }}">
             @csrf
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
-                <label for="remember_me" class="flex items-center">
+                <label for="email" class="labelLoginOrRegister">E-mail</label>
+                <x-jet-input id="email" class="inputLoginOrRegister" type="email" name="email" :value="old('email')" required autofocus />
+                <label for="password" class="labelLoginOrRegister">Senha</label>
+                <x-jet-input id="password" class="inputLoginOrRegister" type="password" name="password" required autocomplete="current-password" />
+                <label for="remember_me" class="checkLoginOrRegister">
                     <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                    <span>{{ __('Remember me') }}</span>
                 </label>
 
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                    <a class="checkLoginOrRegister" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
 
-                <x-jet-button class="ml-4">
-                    {{ __('Log in') }}
+                <x-jet-button class="inputSubmit">
+                    {{ __('Entrar') }}
                 </x-jet-button>
         </form>
     </div>
     <div class="divRegister">
+        <h1>Cadastre-se</h1>
         <form method="POST" action="{{ route('register') }}">
             @csrf
-            <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-            <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
-            <x-jet-button class="ml-4">
-                {{ __('Register') }}
+            <label for="name" class="labelLoginOrRegister">Seu nome</label>
+            <x-jet-input id="name" class="inputLoginOrRegister" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <label for="email" class="labelLoginOrRegister">E-mail</label>
+            <x-jet-input id="email" class="inputLoginOrRegister" type="email" name="email" :value="old('email')" required />
+            <label for="password" class="labelLoginOrRegister">Senha</label>
+            <x-jet-input id="password" class="inputLoginOrRegister" type="password" name="password" required autocomplete="new-password" />
+            <label for="password_confirmation" class="labelLoginOrRegister">Confirme a senha</label>
+            <x-jet-input id="password_confirmation" class="inputLoginOrRegister" type="password" name="password_confirmation" required autocomplete="new-password" />
+            <x-jet-button class="inputSubmit">
+                {{ __('Cadastrar') }}
             </x-jet-button>
         </form>
     </div>
