@@ -1,0 +1,24 @@
+* {
+    background-color: rgb(40,40,40);
+    color: aqua;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.divLogo {
+    width: 300px;
+    height: 300px;
+    background-image: url("../imagens/logo.png");
+    background-size: cover;
+    margin-top: 50px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 50px black;
+}
+
+.divLinha {
+    width: 100%;
+    height: 3px;
+    border-bottom: 2px solid aqua;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
