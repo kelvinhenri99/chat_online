@@ -10,4 +10,9 @@ class ChatController extends Controller
 
         return  view ('welcome');
     }
+
+    public function chat($id) {
+
+        return  view ('chat',compact(['id']));
+    }
 }

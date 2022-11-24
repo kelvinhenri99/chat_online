@@ -12,10 +12,6 @@
                 <x-jet-input id="email" class="inputLoginOrRegister" type="email" name="email" :value="old('email')" required autofocus />
                 <label for="password" class="labelLoginOrRegister">Senha</label>
                 <x-jet-input id="password" class="inputLoginOrRegister" type="password" name="password" required autocomplete="current-password" />
-                <label for="remember_me" class="checkLoginOrRegister">
-                    <x-jet-checkbox id="remember_me" name="remember" />
-                    <span>{{ __('Remember me') }}</span>
-                </label>
 
                 @if (Route::has('password.request'))
                     <a class="checkLoginOrRegister" href="{{ route('password.request') }}">
@@ -50,7 +46,7 @@
 
 @auth
     <div class="divMenu">
-        <a href="#"><ion-icon name="chatbubble-ellipses"></ion-icon> CHAT</a>
+        <a href="/chat/{{Auth::user()->id}}"><ion-icon name="chatbubble-ellipses"></ion-icon> CHAT</a>
         <a href="#"><ion-icon name="build"></ion-icon> Configurações</a>
         <form method="POST" action="{{ route('logout') }}">
             @csrf

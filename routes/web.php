@@ -16,6 +16,7 @@ use App\Http\Controllers\ChatController;
 */
 
 Route::get('/', [ChatController::class, 'welcome']);
+Route::get('/chat/{id}', [ChatController::class, 'chat']);
 
 Route::middleware([
     'auth:sanctum',

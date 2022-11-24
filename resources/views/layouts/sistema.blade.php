@@ -7,6 +7,7 @@
     <title>CHAT ONLINE</title>
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/welcome.css">
+    <link rel="stylesheet" href="../css/chat.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
